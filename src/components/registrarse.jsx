@@ -134,7 +134,7 @@ function Registrarse1() {
                         {/* <p className="pMail">DNI</p> */}
                         <input type="text" id="" className="input1 inp4" onChange={(e) => {
                             setV1(e.target.value)
-                        }} value={valor1} placeholder="E-mali" name="gmail" />
+                        }} value={valor1} placeholder="E-mail" name="gmail" />
                         {/* <p className="pAsunt">Contraseña</p> */}
                         <input type="password" onChange={(e) => {
                             setV2(e.target.value)
