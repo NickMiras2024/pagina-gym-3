@@ -46,13 +46,13 @@ function PagCent({ text }) {
           getI ? <Registrarse1 /> : <></>
         }
 
-        <h1 className='h1'>Sé tu mejor version</h1>
-        <button className='btn1' onClick={() => { window.location.href = 'https://www.instagram.com/' }}>Unete ahora</button>
+        <h1 className='h1'>Sé tu mejor versión</h1>
+        <button className='btn1' onClick={() => { window.location.href = 'https://www.instagram.com/' }}>Unite ahora</button>
       </div>
 
       <div className='bloque2'>
         {/* <h2 className='h2' >Qué ofrecemos?</h2> */}
-        <p className='p1'>Nos comprometemos a brindarte con la mejor experiencia de entrenamiento.</p>
+        <p className='p1'>Nos comprometemos a brindarte la mejor experiencia de entrenamiento.</p>
         <div className='contCards'>
           <Cards c={"card1"} cont={"Nuestro Gym"} id={1} />
           <Cards c={"card2"} cont={"EXPLORA NUESTRAS CLASES EN GRUPO"} id={1} />
@@ -61,9 +61,9 @@ function PagCent({ text }) {
       </div>
 
       <div className='bloque3'>
-        <h3 className='h3'>¡Ponte en contacto ahora!</h3>
+        <h3 className='h3'>¡Ponete en contacto ahora!</h3>
         <div className='fotter'>
-          <Info dt={'ubicacion'} id={3} dt2={ubicacion} redireccion={'https://www.google.com/maps/place/Av.+7+481,+B1906+Tolosa,+Provincia+de+Buenos+Aires/@-34.8963999,-57.9742746,21z/data=!4m6!3m5!1s0x95a2e7a7f58afe6b:0x76619725740dfe9c!8m2!3d-34.8963761!4d-57.9742467!16s%2Fg%2F11rg5_k0q9!5m1!1e2?entry=ttu'} />
+          <Info dt={'ubicación'} id={3} dt2={ubicacion} redireccion={'https://www.google.com/maps/place/Av.+7+481,+B1906+Tolosa,+Provincia+de+Buenos+Aires/@-34.8963999,-57.9742746,21z/data=!4m6!3m5!1s0x95a2e7a7f58afe6b:0x76619725740dfe9c!8m2!3d-34.8963761!4d-57.9742467!16s%2Fg%2F11rg5_k0q9!5m1!1e2?entry=ttu'} />
           <Info dt={'Instagram'} id={4} dt2={insta} redireccion={'https://www.instagram.com/'} />
           <Info dt={'Facebook'} id={5} dt2={face} redireccion={'https://www.facebook.com/'} />
 
