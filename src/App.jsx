@@ -632,10 +632,10 @@ return (
 
             </div>
           </div>
-          : <PagCent text={'iniciar sesion'} />
+          : <PagCent text={'Iniciar sesión'} />
 
       :
-      <PagCent text={'iniciar sesion'} />
+      <PagCent text={'Iniciar sesión'} />
 
 
 
