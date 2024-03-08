@@ -159,7 +159,7 @@ function Registrarse1() {
                             setV1('')
                             setV2('')
 
-                        }}> Olvide mi contraseña </button>
+                        }}> Olvidé mi contraseña </button>
                         <div className="btnsEnviar">
                             <button className='inpSub2' onClick={() => {
                                 setI(!getI)
@@ -177,7 +177,7 @@ function Registrarse1() {
                                     alert('coloque parametros validos')
                                 }
 
-                            }}>Iniciar secion </button>
+                            }}>Iniciar sesión </button>
                         </div>
                     </div>
                     :
