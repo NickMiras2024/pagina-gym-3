@@ -11,6 +11,38 @@
     position: fixed;
 }
 
+.conteiner_V_C {
+    width: 100%;
+    /* background-color: #db6e20; */
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    box-sizing: border-box;
+    padding-right: 55%;
+    padding-left: 10px;
+    align-items: center;
+    pointer-events: none;
+    position: relative;
+}
+
+.checkV {
+    height: 20px;
+    width: 20px;
+    pointer-events: all;
+    position: absolute;
+
+
+}
+
+.p51{
+    position: absolute;
+    left: 40px;
+    font-size: 18px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
 
 p {
     color: #ffffff;
@@ -56,7 +88,7 @@ input {
     background: #ddd31d;
 }
 
-.btnOlv{
+.btnOlv {
     background-color: transparent;
     border: none;
     text-decoration: underline;
@@ -65,8 +97,8 @@ input {
     margin-left: 5px;
 }
 
-.btnOlv:hover{
-    cursor: pointer;    
+.btnOlv:hover {
+    cursor: pointer;
 }
 
 .btnsEnviar {
@@ -100,7 +132,7 @@ input {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 770px) {
     .container {
         background-color: #141414;
         height: 300px;
@@ -116,7 +148,7 @@ input {
         font-size: 200%;
     }
 
-    .input{
+    .input {
         font-size: 100%;
 
     }
