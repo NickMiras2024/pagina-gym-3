@@ -120,11 +120,10 @@ function Registrarse1() {
     const [valor1, setV1] = useState('')
     const [valor2, setV2] = useState('')
     const [cambiar, setCam] = useState(false)
+    const [ver,setVer] = useState(false)
 
 
-
-
-
+       
 
     return (
         <>
@@ -134,32 +133,39 @@ function Registrarse1() {
                         {/* <p className="pMail">DNI</p> */}
                         <input type="text" id="" className="input1 inp4" onChange={(e) => {
                             setV1(e.target.value)
-                        }} value={valor1} placeholder="E-mail" name="gmail" />
+                        }} value={valor1} placeholder="E-mali" name="gmail" />
                         {/* <p className="pAsunt">Contraseña</p> */}
                         <input type="password" onChange={(e) => {
                             setV2(e.target.value)
-                            let termin = true;
-                            document.getElementById('input').type = 'text';
-                            if (termin) {
-                                termin = false
-                                setTimeout(() => {
-                                    document.getElementById('input').type = 'password';
-                                    termin = true
-
-                                }, 1000)
-                            }
+                            
 
 
                         }}
                             value={valor2} id="input" className="input2" placeholder="Contraseña" name="asunto"
                         />
+                        <div className='conteiner_V_C'>
+                            <input type="checkbox" className='checkV' name="" id="123" onClick={
+                                    (e)=>{
+                                    setVer(e.target.checked)
+                                    console.log(e.target.checked)
+                                    if(!ver){
+                                        document.getElementById("input").type="text";
+                                    }else {
+                                        document.getElementById("input").type="password";
+                            
+                                    }
+                            
+                                }
+                            }/>
+                            <p className='p51'>Ver contraseña</p>
+                        </div>
                         <button className='btnOlv' onClick={() => {
 
                             setCam(true)
                             setV1('')
                             setV2('')
 
-                        }}> Olvidé mi contraseña </button>
+                        }}> Olvide mi contraseña </button>
                         <div className="btnsEnviar">
                             <button className='inpSub2' onClick={() => {
                                 setI(!getI)
@@ -177,7 +183,7 @@ function Registrarse1() {
                                     alert('coloque parametros validos')
                                 }
 
-                            }}>Iniciar sesión </button>
+                            }}>Iniciar secion </button>
                         </div>
                     </div>
                     :
@@ -189,21 +195,12 @@ function Registrarse1() {
                         {/* <p className="pAsunt">Contraseña</p> */}
                         <input type="email" onChange={(e) => {
                             setV2(e.target.value)
-                            let termin = true;
-                            document.getElementById('input').type = 'text';
-                            if (termin) {
-                                termin = false
-                                setTimeout(() => {
-                                    document.getElementById('input').type = 'password';
-                                    termin = true
-
-                                }, 1000)
-                            }
 
 
                         }}
                             value={valor2} id="input" className="input2" placeholder="Email" name="asunto"
                         />
+
 
                         <div className="btnsEnviar">
                             <button className='inpSub2' onClick={() => {
