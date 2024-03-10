@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import '../styles/barraNav.css'
 import { contextoGood } from '../App'
-
+import hombre from  '../assets/hombre.png'
 
 
 
@@ -29,7 +29,7 @@ const BarraNav = ({text}) => {
 
     return (
         <div className="barraNav">
-            <img  src="../../public/hombre.png" alt="" className='imgLogo' onClick={()=>{
+            <img  src={hombre} alt="" className='imgLogo' onClick={()=>{
                 window.location.reload()
             }} />
 
