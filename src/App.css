@@ -54,14 +54,15 @@
 }
 
 @keyframes animationA {
-  0%{
+  0% {
     opacity: 0;
     transform: scale(0);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: scale(1);
-  
+
   }
 
 }
@@ -84,7 +85,9 @@
   pointer-events: all;
 }
 
-.btn1:hover {background-color: #e4da21;}
+.btn1:hover {
+  background-color: #e4da21;
+}
 
 
 .bt3 {
@@ -104,7 +107,9 @@
 
 }
 
-.bt5:hover {background-color: #eb7622;}
+.bt5:hover {
+  background-color: #eb7622;
+}
 
 .bt6 {
   top: 20%;
@@ -113,7 +118,7 @@
 
 }
 
-.bt6:hover{
+.bt6:hover {
   background-color: #e4da21;
 }
 
@@ -140,7 +145,7 @@ p {
   border-radius: 20px;
 }
 
-.texA{
+.texA {
   width: 100%;
   height: 50px;
   background-color: #3b3b3b;
@@ -152,7 +157,7 @@ p {
 }
 
 
-.btnP{
+.btnP {
   width: 20%;
   height: 50px;
   font-weight: 200;
@@ -165,13 +170,16 @@ p {
 
 }
 
-.btnP:hover {background-color: #e4da21;}
+.btnP:hover {
+  background-color: #e4da21;
+}
 
-.btnP2{
+.btnP2 {
   background-color: #f97d23;
 
 }
-.btnP2:hover{
+
+.btnP2:hover {
   background-color: #eb7622;
 
 }
@@ -183,11 +191,12 @@ p {
   overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 270px;
+  margin-top: 170px;
   margin-left: 10%;
   /* box-shadow: #f9ef23 0px 0px 20px; */
   pointer-events: all;
 }
+
 .contenedorU3 {
   width: 80%;
   height: 400px;
@@ -200,7 +209,12 @@ p {
   /* box-shadow: #f9ef23 0px 0px 20px; */
   pointer-events: none;
 }
-.btSal{
+
+.contenedorU4{
+  margin-top: 270px;
+}
+
+.btSal {
   height: 40px;
   width: 40px;
   border: 1px solid #838383;
@@ -210,12 +224,12 @@ p {
   background-image: url('./assets/flecha2.png');
   background-position: center;
   background-size: cover;
-  filter:opacity(0.5);
+  filter: opacity(0.5);
   pointer-events: all;
 }
 
-.btSal:hover{
-  filter:opacity(1);
+.btSal:hover {
+  filter: opacity(1);
   cursor: pointer;
   box-shadow: 0 0 10px #fff;
 }
@@ -231,12 +245,13 @@ p {
 
 }
 
-tbody{
+tbody {
   overflow-y: scroll;
 }
 
 .tabla td {
-  min-height: 90px; /* Establecer una altura mínima para las celdas */
+  min-height: 90px;
+  /* Establecer una altura mínima para las celdas */
   /* border-top: .1px solid #585858; */
   text-align: center;
 }
@@ -305,6 +320,7 @@ tbody{
   z-index: -1;
   background-size: cover;
   background-position: center;
+  position: relative;
   overflow: hidden;
 }
 
@@ -380,6 +396,7 @@ tbody{
   pointer-events: none;
 
 }
+
 .contCards2 {
   display: flex;
   justify-content: space-around;
@@ -393,17 +410,19 @@ tbody{
 }
 
 
-.btC{
+.btC {
   box-sizing: border-box;
   height: 340px;
   width: 250px;
+  margin-top: 40px;
   border-radius: 20px;
-  border:none ;
+  border: none;
   pointer-events: all;
   color: #838383;
   font-size: 200%;
   font-weight: 600;
-  filter: grayscale(100%); /* IE6-9 */
+  filter: grayscale(100%);
+  /* IE6-9 */
   font-family: Arial, Helvetica, sans-serif;
   background-image: url('assets/historial.png');
   background-position: 0 80px;
@@ -413,44 +432,45 @@ tbody{
   text-align: center;
   padding-bottom: 280px;
   transition: .3s;
-  animation:animacionAparecer .7s ;
+  animation: animacionAparecer .7s;
 }
 
 
 @keyframes animacionAparecer {
-    0%{
-      transform: scale(0);
-    }
-    100%{
-      transform: scale(1);
+  0% {
+    transform: scale(0);
+  }
 
-    }
+  100% {
+    transform: scale(1);
+
+  }
 }
 
 
 
-.btC2{
+.btC2 {
   background-image: url('assets/entrenamientos.png');
 
 }
 
-.btC3{
+.btC3 {
   background-image: url('assets/form2.png');
 
 }
 
 
-.btC4{
+.btC4 {
   background-image: url('assets/usuarioVer.png');
 
 }
 
-.btC:hover{
+.btC:hover {
   background-color: #3b3b3b;
   filter: grayscale(0);
 }
 
-.selct12{
+.selct12 {
   width: 100%;
   height: 40px;
   margin-bottom: 40px;
@@ -459,7 +479,7 @@ tbody{
   text-align: center;
 }
 
-.selct1{
+.selct1 {
   width: 100%;
   height: 40px;
   margin-bottom: 40px;
@@ -470,7 +490,7 @@ tbody{
   border: none;
 }
 
-.op{
+.op {
   height: 50px;
 }
 
@@ -489,7 +509,7 @@ tbody{
   box-sizing: border-box;
   height: 200px;
   position: absolute;
-  top: 320%;
+  bottom: -2%;
   /* bottom: 0; */
 }
 
@@ -510,6 +530,7 @@ tbody{
   border-radius: 20px;
 
 }
+
 .contenedorB {
   pointer-events: none;
 }
@@ -540,11 +561,11 @@ tbody{
 }
 
 
-@media (max-width: 940px) {
+@media (max-width: 900px) {
 
 
-  .contCards2{
-      margin-left: 40%;
+  .contCards2 {
+    margin-left: 40%;
   }
 
   .contenedorB {
@@ -649,8 +670,19 @@ tbody{
   .contenedorU {
     height: 700px;
     font-size: 200%;
+    /* margin-top: 470px; */
     width: 100%;
   }
+
+  /* .contInp{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 100%;
+    box-sizing: border-box;
+    padding-right: 10%;
+  } */
+
   .contenedorU3 {
     height: 500px;
     font-size: 170%;
@@ -658,13 +690,15 @@ tbody{
     margin-top: 80%;
 
   }
+  .contenedorU4{
+    margin-top: 370px;
+  }
 
-
-  .contU2{
+  .contU2 {
     font-size: 100%;
   }
 
-  .btSal{
+  .btSal {
     top: 30%;
   }
 
@@ -703,48 +737,49 @@ tbody{
     background: #141414;
   }
 
-  
-  .h21{
+
+  .h21 {
     top: 40%;
     font-size: 200%;
   }
 
-  .bt5{
+  .bt5 {
     top: 20%;
     left: 20%;
   }
-  .bt6{
+
+  .bt6 {
     top: 20%;
     left: 100%;
 
   }
 
-  .h22{
+  .h22 {
     top: 20%;
     font-size: 200%;
     left: 50%;
   }
 
-  .contForm{
+  .contForm {
     font-size: 140%;
   }
 
-  .btnP{
+  .btnP {
     font-size: 70%;
   }
 
 
-  .input1{
+  .input1 {
     font-size: 100%;
   }
 
-  .texA{
+  .texA {
     font-size: 100%;
     height: 150px;
     margin-bottom: 20px;
-  } 
+  }
 
-  .inp4{
+  .inp4 {
     font-size: 200%;
   }
 
