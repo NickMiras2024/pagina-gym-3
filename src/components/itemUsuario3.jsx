@@ -34,7 +34,7 @@ function ItemUser3({ data }) {
 
     console.log(data)
     return (
-        <tr>
+        <tr className="I">
             <td> {data.dia} </td>
             <td> {data.hs} </td>
             <td> {data.entrenamientos} </td>
