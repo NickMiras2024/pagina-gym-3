@@ -62,7 +62,7 @@ function ItemUser({ data }) {
 
         const confirm = window.confirm('seguro que quieres modificar este campo')
         if (confirm) {
-            let res = await fetch('http://localhost:3000/updateUsers', {
+            let res = await fetch(`${ruta}/updateUsers`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
