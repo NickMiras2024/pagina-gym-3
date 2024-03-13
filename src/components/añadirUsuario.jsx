@@ -79,7 +79,7 @@ function AñadirUsuario() {
                     <option value="cliente" className='op'>Cliente</option>
                 </select>
             </div>
-            <p>tel</p>
+            <p>Tel</p>
             <input className="input" type="number" name="" id="" onChange={(e) => {
 
                 SN5(e.target.value)
@@ -92,7 +92,7 @@ function AñadirUsuario() {
 
 
             }} value={N6} />
-            <p>contraseña</p>
+            <p>Contraseña</p>
             <input className="input" type="text" onChange={(e) => {
 
                 SN7(e.target.value)
