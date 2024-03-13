@@ -253,10 +253,10 @@ function App() {
                     <thead>
                       <tr>
                         <th >DNI</th>
-                        <th >nombre</th>
+                        <th >Nombre</th>
                         <th >Email</th>
-                        <th >fecha de inscripcion </th>
-                        <th >reango</th>
+                        <th >Fecha de inscripción </th>
+                        <th >Rango</th>
                         <th>Tel</th>
                         <th></th>
                       </tr>
