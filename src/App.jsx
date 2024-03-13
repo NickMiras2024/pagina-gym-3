@@ -418,7 +418,7 @@ function App() {
                             SN10(e.target.value)
                           }} value={N10} />
 
-                          <p>entrenamiento</p>
+                          <p>Entrenamiento</p>
 
                           <textarea type="text" className='texA' onChange={(e) => {
 
@@ -482,9 +482,9 @@ function App() {
                               <thead>
                                 <tr>
 
-                                  <th >dia</th>
-                                  <th >hs</th>
-                                  <th>entrenamiento</th>
+                                  <th >Día</th>
+                                  <th >HS</th>
+                                  <th>Entrenamiento</th>
                                   <th></th>
 
                                 </tr>
