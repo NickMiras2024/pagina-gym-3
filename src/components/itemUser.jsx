@@ -9,7 +9,7 @@ import { useContext, useState } from 'react';
 
 function ItemUser({ data }) {
 
-    const { usuario, cargarUsuarios,cargar,ruta, setCarg } = useContext(contextoGood)
+    const { usuario, cargarUsuarios, cargar, ruta, setCarg } = useContext(contextoGood)
 
     const [editing, setEditing] = useState(false);
     const [valor, setValor] = useState(data.DNI);
@@ -26,7 +26,8 @@ function ItemUser({ data }) {
 
 
     function eliminar(data2, nombre) {
-        if (usuario.DNI == data2.DNI) {
+        if (usuario.DNI == data2.DNI || parseInt(data2.DNI) == 123456) {
+            alert("No se puede eliminar este usuario")
             return
         } else {
             const confirm = window.confirm('seguro que quieres eliminar a :' + nombre)
@@ -60,25 +61,32 @@ function ItemUser({ data }) {
         "DNI": parseInt(data.DNI),
     }) {
 
-        const confirm = window.confirm('seguro que quieres modificar este campo')
-        if (confirm) {
-            let res = await fetch(`${ruta}/updateUsers`, {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data2)
-            });
-
-            // console.log(await res.text())
-
+        if (data2.DNI == 123456) {
+            alert('no puedes modificar ni eliminar este usuario')
+            return
         } else {
-            console.log('-')
+            const confirm = window.confirm('seguro que quieres modificar este campo?')
+            if (confirm) {
+                let res = await fetch(`${ruta}/updateUsers`, {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data2)
+                });
+
+                console.log(await res.text())
+
+            } else {
+                console.log('-')
+            }
+
+
+
+
+
+            cargarUsuarios({ "DNI": usuario.DNI, "contrasena": usuario.contrasena })
         }
-
-
-
-
 
         cargarUsuarios({ "DNI": usuario.DNI, "contrasena": usuario.contrasena })
 
