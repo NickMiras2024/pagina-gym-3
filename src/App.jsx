@@ -577,7 +577,7 @@ function App() {
 
                                 <th>Fecha</th>
                                 <th >Día</th>
-                                <th >hS</th>
+                                <th >HS</th>
                                 <th>Entrenamiento</th>
 
                               </tr>
