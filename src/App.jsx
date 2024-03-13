@@ -576,9 +576,9 @@ function App() {
                               <tr>
 
                                 <th>Fecha</th>
-                                <th >dia</th>
-                                <th >hs</th>
-                                <th>entrenamiento</th>
+                                <th >Día</th>
+                                <th >hS</th>
+                                <th>Entrenamiento</th>
 
                               </tr>
                             </thead>
@@ -611,9 +611,9 @@ function App() {
                           <thead>
                             <tr>
 
-                              <th >dia</th>
-                              <th >hs</th>
-                              <th>entrenamiento</th>
+                              <th >Día</th>
+                              <th >HS</th>
+                              <th>Entrenamiento</th>
 
                             </tr>
                           </thead>
