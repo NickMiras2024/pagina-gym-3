@@ -1,79 +1,64 @@
-.barraNav {
-    position: fixed;
-    pointer-events: all;
-    top: 0;
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    height: 10%;
-    background: linear-gradient(90deg, rgb(29 28 4), #f9ef23);
-    z-index: 99;
-    box-sizing: border-box;
-    padding-right: 5%;
-    animation: ani .5s ;
-    animation-timeline: unset;
-}
+import { useContext, useEffect, useState } from 'react'
+import '../styles/barraNav.css'
+import { contextoGood } from '../App'
+import hombre from '../assets/hombre.png'
 
 
 
 
-@keyframes ani {
-    0% {
-        width: 0%;
-        /* height: 0%; */
 
+
+const BarraNav = ({ text }) => {
+
+    const {cargarNovedades,setNovedades,novedades, getI, cerrar, setI, setC } = useContext(contextoGood)
+
+
+    const IC = () => {
+        setNovedades(false)
+
+        if (window.localStorage.getItem('usuario') && !cerrar) {
+            JSON.parse(window.localStorage.getItem('usuario'))
+            setC(true)
+        } else if (window.localStorage.getItem('usuario') && cerrar) {
+            setC(false)
+            window.localStorage.removeItem('usuario')
+            window.location.reload()
+        } else {
+            setI(!getI)
+            // console.log(getI)
+        }
     }
 
-    100% {
-        width: 100%;
-        /* height: 10%; */
-
-    }
-}
-
-
-.imgLogo{
-    height: 100%;
-    left: 5%;
-    background: #f9ee2300;
-    border: none;
-    font-family: sans-serif;
-    font-size: larger;
-    position: absolute;
-}
 
 
 
+    return (
+        <>
+            <div className="barraNav">
+                <img src={hombre} alt="" className='imgLogo' onClick={() => {
+                    window.location.reload()
+                }} />
 
-.btnN {
-    height: 100%;
-    width: 10%;
-    background: #f9ee2300;
-    border: none;
-    font-family: sans-serif;
-    font-size: larger;
-    position: absolute;
-    cursor: pointer;
-}
+                <button className='btnN btnNov' onClick={()=>{
+                    setNovedades(!novedades);
+                    if(!novedades){
+                        cargarNovedades()
+                    }
+                    }}>Novedades</button>
+
+                <button className="btnN" onClick={()=>{IC()}}>{text}</button>
 
 
-.btnNov{
-    right: 20%;
-}
-
-@media (max-width: 940px) {
-    .barraNav {
-        /* margin-left: -42%; */
-        width: 100%;
+            </div>
         
-        box-sizing: border-box;
-        padding-right: 20%;
-    }
-    .btnN {
-        font-size: 200%;
-    }
-    .btnNov{
-        right: 60%;
-    }
 
+        </>
+
+
+
+
+
+    );
 }
+
+export default BarraNav;
