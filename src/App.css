@@ -543,7 +543,7 @@ tbody {
 .contenedorPrins{
   width: 90%;
   margin: auto;
-  margin-top: 20%;
+  margin-top: 10%;
   background-color: #141414;
 }
 
@@ -627,7 +627,9 @@ tbody {
 
 .inputfile + label {
   pointer-events: all;
-
+  color: #000;
+  margin-left: 10px;
+  margin-bottom: 50px;
   max-width: 80%;
   font-size: 1.25rem;
   font-weight: 700;
@@ -658,8 +660,11 @@ font-family: 'Lato';
 
 
 .inputfile-1 + label {
-  color: #fff;
+  /* color: #fff; */
   background-color: #e4da21;
+  color: #000;
+  margin-left: 10px;
+  margin-bottom: 50px;
 }
 
 .inputfile-1:focus + label,
@@ -702,6 +707,7 @@ font-family: 'Lato';
     margin: auto;
     margin-top: 200px;
     width: 90%;
+    margin-top: 20%;
   }
 
   .btnAddIMG{
