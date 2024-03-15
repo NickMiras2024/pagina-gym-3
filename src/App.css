@@ -4,6 +4,9 @@
   margin: 0;
 }
 
+body{
+  background-color: #141414;
+}
 
 
 .imagen1 {
@@ -537,6 +540,137 @@ tbody {
 
 
 
+.contenedorPrins{
+  width: 90%;
+  margin: auto;
+  margin-top: 20%;
+  background-color: #141414;
+}
+
+.btnAddIMG{
+  width: 100%;
+  height: 30px;
+  padding-left: 30%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  pointer-events: all;
+}
+
+.btnAddIMG::file-selector-button {
+  background-color: transparent;
+  border: none;
+
+}
+
+.contenedorIMG{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  pointer-events: none;
+}
+
+.cajaEliminar{
+  height: 70px;
+  width: 70px;
+  background-color: #fff757;
+  position: fixed;
+  background-position: center;
+  border-radius: 50%;
+  background-image: url("./assets/basura.png");
+  background-size: cover;
+  right: 100px;
+  bottom: 100px;
+  pointer-events: all;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  pointer-events: all;
+}
+
+.custom-file-upload span {
+  font-size: 16px;
+  color: #fff;
+}
+
+#fileInput {
+  /* display: none; Oculta el input file */
+  margin-left: 200px;
+
+}
+
+.container-input {
+  text-align: center;
+  background: #282828;
+  border-top: 5px solid #f9ef23;
+  padding: 50px 0;
+  border-radius: 6px;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  pointer-events: all;
+}
+
+.inputfile + label {
+  pointer-events: all;
+
+  max-width: 80%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+  width: 1em;
+  pointer-events: all;
+
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.iborrainputfile {
+font-size:16px; 
+font-weight:normal;
+font-family: 'Lato';
+}
+
+
+.inputfile-1 + label {
+  color: #fff;
+  background-color: #e4da21;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+  background-color: #f9ef23;
+  color: #000;
+  margin-left: 10px;
+  margin-bottom: 50px;
+}
+
 
 
 @media (max-width: 700px) {
@@ -562,6 +696,18 @@ tbody {
 
 
 @media (max-width: 900px) {
+
+
+  .contenedorPrins{
+    margin: auto;
+    margin-top: 200px;
+    width: 90%;
+  }
+
+  .btnAddIMG{
+    width: 100%;
+    height: 80%;
+  }
 
 
   .contCards2 {
