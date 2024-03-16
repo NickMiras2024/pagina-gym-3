@@ -309,10 +309,14 @@ function App() {
 
                 <div className='contenedorIMG'>
                   {
-                    imgs.map((e, i) => {
-                      return <CargarImgs ie={i} key={i} src1={e.i} />
+                    imgs.length != 0 ?
+                  imgs.map((e, i) => {
+                    return <CargarImgs ie={i} key={i} src1={e.i} />
 
-                    })
+                  })
+                  : 
+                  <>                  
+                  </>     
                   }
                 </div>
                 <div className='cajaEliminar' onDragOver={(e) => {
@@ -503,10 +507,14 @@ function App() {
                 <div className='contenedorPrins'>
                   <div className='contenedorIMG'>
                     {
-                      imgs.map((e, i) => {
-                        return <CargarImgs ie={i} key={i} src1={e.i} />
+                     imgs.length != 0 ?
+                  imgs.map((e, i) => {
+                    return <CargarImgs ie={i} key={i} src1={e.i} />
 
-                      })
+                  })
+                  : 
+                  <>                  
+                  </>     
                     }
                   </div>
 
@@ -687,10 +695,14 @@ function App() {
                   <div className='contenedorPrins'>
                     <div className='contenedorIMG'>
                       {
-                        imgs.map((e, i) => {
-                          return <CargarImgs ie={i} key={i} src1={e.i} />
+                         imgs.length != 0 ?
+                  imgs.map((e, i) => {
+                    return <CargarImgs ie={i} key={i} src1={e.i} />
 
-                        })
+                  })
+                  : 
+                  <>                  
+                  </>     
                       }
                     </div>
 
@@ -794,10 +806,14 @@ function App() {
                   <div className='contenedorPrins'>
                     <div className='contenedorIMG'>
                       {
-                        imgs.map((e, i) => {
-                          return <CargarImgs ie={i} key={i} src1={e.i} />
+                        imgs.length != 0 ?
+                  imgs.map((e, i) => {
+                    return <CargarImgs ie={i} key={i} src1={e.i} />
 
-                        })
+                  })
+                  : 
+                  <>                  
+                  </>     
                       }
                     </div>
 
@@ -817,10 +833,14 @@ function App() {
             <div className='contenedorPrins'>
               <div className='contenedorIMG'>
                 {
+                   imgs.length != 0 ?
                   imgs.map((e, i) => {
                     return <CargarImgs ie={i} key={i} src1={e.i} />
 
                   })
+                  : 
+                  <>                  
+                  </>     
                 }
               </div>
 
