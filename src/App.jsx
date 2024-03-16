@@ -324,6 +324,8 @@ function App() {
                 }}
                   onDrop={(event) => {
                     event.preventDefault();
+                    const confirm = window.confirm('seguro que quieres eliminar esta imagen?')
+                    if(confirm){
                     const data = event.dataTransfer.getData('text/plain');
                     console.log('Elemento soltado:', data);
 
@@ -338,8 +340,12 @@ function App() {
                       .then(response => response.text())
                       .then(data => console.log(data))
                       .catch(error => console.error('Error:', error));
-                    // cargarNovedades()
-                    // setNovedades(!novedades)
+                    cargarNovedades()
+                    setNovedades(!novedades)  
+                    }else{
+                      return
+                    }
+                    
                   }}
                 >
                 </div>
