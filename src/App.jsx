@@ -789,7 +789,7 @@ function App() {
               : novedades ?
 
                 <>
-                  <BarraNav text={'cerrar secion'} />
+                  <BarraNav text={'Iniciar sesión'} />
 
                   <div className='contenedorPrins'>
                     <div className='contenedorIMG'>
@@ -812,7 +812,7 @@ function App() {
         : novedades ?
 
           <>
-            <BarraNav text={'cerrar secion'} />
+            <BarraNav text={'Iniciar sesión'} />
 
             <div className='contenedorPrins'>
               <div className='contenedorIMG'>
