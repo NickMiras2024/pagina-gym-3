@@ -18,7 +18,7 @@ export const contextoGood = createContext()
 
 let usuario = undefined;
 
-const ruta = "http://localhost:3000"
+const ruta = "https://apidelgym1.onrender.com/"
 
 
 
