@@ -18,7 +18,7 @@ export const contextoGood = createContext()
 
 let usuario = undefined;
 
-const ruta = "https://apidelgym1.onrender.com"
+const ruta = "http://localhost:3000"
 
 
 
@@ -59,6 +59,7 @@ function App() {
   const [N10, SN10] = useState('')
   const [N11, SN11] = useState('')
 
+  const [formdata,SFD] = useState(undefined)
 
   async function cargarT() {
     if (localStorage.getItem('usuario') && usuario == undefined) {
@@ -309,14 +310,10 @@ function App() {
 
                 <div className='contenedorIMG'>
                   {
-                    imgs.length != 0 ?
-                  imgs.map((e, i) => {
-                    return <CargarImgs ie={i} key={i} src1={e.i} />
+                    imgs.map((e, i) => {
+                      return <CargarImgs ie={i} key={i} src1={e.i} />
 
-                  })
-                  : 
-                  <>                  
-                  </>     
+                    })
                   }
                 </div>
                 <div className='cajaEliminar' onDragOver={(e) => {
@@ -324,8 +321,6 @@ function App() {
                 }}
                   onDrop={(event) => {
                     event.preventDefault();
-                    const confirm = window.confirm('seguro que quieres eliminar esta imagen?')
-                    if(confirm){
                     const data = event.dataTransfer.getData('text/plain');
                     console.log('Elemento soltado:', data);
 
@@ -340,12 +335,8 @@ function App() {
                       .then(response => response.text())
                       .then(data => console.log(data))
                       .catch(error => console.error('Error:', error));
-                    cargarNovedades()
-                    setNovedades(!novedades)  
-                    }else{
-                      return
-                    }
-                    
+                    // cargarNovedades()
+                    // setNovedades(!novedades)
                   }}
                 >
                 </div>
@@ -513,14 +504,10 @@ function App() {
                 <div className='contenedorPrins'>
                   <div className='contenedorIMG'>
                     {
-                     imgs.length != 0 ?
-                  imgs.map((e, i) => {
-                    return <CargarImgs ie={i} key={i} src1={e.i} />
+                      imgs.map((e, i) => {
+                        return <CargarImgs ie={i} key={i} src1={e.i} />
 
-                  })
-                  : 
-                  <>                  
-                  </>     
+                      })
                     }
                   </div>
 
@@ -563,6 +550,29 @@ function App() {
                                 SN11(e.target.value)
 
                               }} value={N11}></textarea>
+                              <div className='contenedor_dcume'>
+                                <input type="file" name="fileses" onChange={(e) => {
+                                   const file = e.target.files[0]; // Obtener el primer archivo seleccionado
+
+                                   const formData = new FormData();
+                                   formData.append('fileses', file);
+                 
+                                   fetch(`${ruta}/subirArch`, {
+                                     method: 'POST',
+                                     body: formData, // Envía el FormData con el archivo
+                                   })
+                                     .then(response => response.json())
+                                     .then(data => SFD(data.ruta))
+                                     .catch(error => console.error('Error:', error));
+                                  }}
+                                  id="fileInput" className="inputfile2 inputfile-12" data-multiple-caption="{count} archivos seleccionados" multiple />
+                                <label htmlFor="fileInput">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="iborrainputfile2" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                                  <span className="iborrainputfile2">Seleccionar archivo</span>
+                                </label>
+
+
+                              </div>
 
                               <button className='btnP btnP2 ' onClick={() => setAU(false)} >Cancelar</button>
                               <button className='btnP' onClick={
@@ -590,14 +600,28 @@ function App() {
                                     alert('el entrenamiento tiene que tener al menos 5 caracteres')
                                     return
                                   }
-                                  añadirEntrenamiento({
+                                  if(formdata !== undefined ){
+                                    console.log(formdata)
+                                     añadirEntrenamiento({
                                     "DNI": usuario.DNI,
                                     "contrasena": usuario.contrasena,
                                     "usuarioDNI": usuarioAC.clienteDNI,
                                     "dia": obj.dia,
                                     "hs": obj.hs,
-                                    "entrenamiento": obj.entrenamiento
+                                    "entrenamiento": obj.entrenamiento,
+                                    "ruta": formdata
                                   })
+                                  }else{
+                                    añadirEntrenamiento({
+                                      "DNI": usuario.DNI,
+                                      "contrasena": usuario.contrasena,
+                                      "usuarioDNI": usuarioAC.clienteDNI,
+                                      "dia": obj.dia,
+                                      "hs": obj.hs,
+                                      "entrenamiento": obj.entrenamiento
+                                    })
+                                  }
+                                 
                                   // console.log({
                                   //   "DNI": usuario.DNI,
                                   //   "contrasena": usuario.contrasena,
@@ -607,7 +631,7 @@ function App() {
                                   //   "entrenamiento": obj.entrenamiento
                                   // })
                                 }
-                              }>Aceptar</button>
+                              } name="documentos" >Aceptar</button>
                             </>
                             :
                             entrenamientos == undefined ?
@@ -701,14 +725,10 @@ function App() {
                   <div className='contenedorPrins'>
                     <div className='contenedorIMG'>
                       {
-                         imgs.length != 0 ?
-                  imgs.map((e, i) => {
-                    return <CargarImgs ie={i} key={i} src1={e.i} />
+                        imgs.map((e, i) => {
+                          return <CargarImgs ie={i} key={i} src1={e.i} />
 
-                  })
-                  : 
-                  <>                  
-                  </>     
+                        })
                       }
                     </div>
 
@@ -774,13 +794,15 @@ function App() {
                                   <th >dia</th>
                                   <th >hs</th>
                                   <th>entrenamiento</th>
+                                  <th>Archivo</th>
+
 
                                 </tr>
                               </thead>
                               <tbody>
                                 {entrenamientos ?
                                   entrenamientos.map((f, index) => {
-                                    return <ItemUser4 key={index} data={f} />
+                                    return <ItemUser4 url={f.urlPDF} key={index} data={f} />
                                   }) : <></>
                                 }
                               </tbody>
@@ -807,19 +829,19 @@ function App() {
               : novedades ?
 
                 <>
-                  <BarraNav text={'Iniciar sesión'} />
+                  <BarraNav text={'cerrar secion'} />
 
                   <div className='contenedorPrins'>
                     <div className='contenedorIMG'>
                       {
                         imgs.length != 0 ?
-                  imgs.map((e, i) => {
-                    return <CargarImgs ie={i} key={i} src1={e.i} />
+                          imgs.map((e, i) => {
+                            return <CargarImgs ie={i} key={i} src1={e.i} />
 
-                  })
-                  : 
-                  <>                  
-                  </>     
+                          })
+                          :
+                          <>
+                          </>
                       }
                     </div>
 
@@ -834,19 +856,19 @@ function App() {
         : novedades ?
 
           <>
-            <BarraNav text={'Iniciar sesión'} />
+            <BarraNav text={'cerrar secion'} />
 
             <div className='contenedorPrins'>
               <div className='contenedorIMG'>
                 {
-                   imgs.length != 0 ?
-                  imgs.map((e, i) => {
-                    return <CargarImgs ie={i} key={i} src1={e.i} />
+                  imgs.length != 0 ?
+                    imgs.map((e, i) => {
+                      return <CargarImgs ie={i} key={i} src1={e.i} />
 
-                  })
-                  : 
-                  <>                  
-                  </>     
+                    })
+                    :
+                    <>
+                    </>
                 }
               </div>
 
