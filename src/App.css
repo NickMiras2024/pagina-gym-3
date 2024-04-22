@@ -677,6 +677,76 @@ font-family: 'Lato';
 }
 
 
+.inputfile2 {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  pointer-events: all;
+}
+
+.inputfile2 + label {
+  pointer-events: all;
+  color: #000;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  max-width: 80%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+}
+
+.inputfile2 + label svg {
+  width: 1em;
+  pointer-events: all;
+
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.iborrainputfile2 {
+font-size:16px; 
+font-weight:normal;
+font-family: 'Lato';
+}
+
+
+.inputfile-12 + label {
+  /* color: #fff; */
+  background-color: #e4da21;
+  color: #000;
+  margin-left: 10px;
+  margin-bottom: 50px;
+}
+
+.inputfile-12:focus + label,
+.inputfile-12.has-focus + label,
+.inputfile-12 + label:hover {
+  background-color: #f9ef23;
+  color: #000;
+  margin-left: 10px;
+  margin-bottom: 50px;
+}
+
+.contenedor_dcume{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
 
 @media (max-width: 700px) {
   .fotter {
